@@ -88,7 +88,7 @@ public class CompanyTest {
         assertThat(employee.getHealthPlans(), instanceOf(String[].class));
     }
 
-    @DisplayName("addHealthplan method başarılı çalışıyor mu?")
+    @DisplayName("addHealthPlan method başarılı çalışıyor mu?")
     @Test
     public void testAddHealthplanMethod() throws NoSuchFieldException {
         employee.addHealthPlan(-1, "Test Sigorta");
@@ -99,7 +99,7 @@ public class CompanyTest {
         assertEquals(Arrays.asList(employee.getHealthPlans()).contains("Test Sigorta"), true);
     }
 
-    @DisplayName("Company sınıf değişkenleri doğru access modifier a sahip mi ?")
+    @DisplayName("org.example.Company sınıf değişkenleri doğru access modifier a sahip mi ?")
     @Test
     public void testCompanyAccessModifiers() throws NoSuchFieldException {
         Field idField = company.getClass().getDeclaredField("id");
@@ -115,7 +115,7 @@ public class CompanyTest {
         assertEquals(healthPlans.getModifiers(), 2);
     }
 
-    @DisplayName("Company sınıf değişkenleri doğru tipte mi ?")
+    @DisplayName("org.example.Company sınıf değişkenleri doğru tipte mi ?")
     @Test
     public void testCompanyInstanceTypes() throws NoSuchFieldException {
         assertThat(company.getName(), instanceOf(String.class));
